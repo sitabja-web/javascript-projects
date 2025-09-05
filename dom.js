@@ -1,54 +1,94 @@
-console.log("ayush")
-
-console.assert(444>555) // 
-
-
-console.clear()     // this clears all the things 
-
-// parse int convers a string to a number 
-
-console.log(document.title)  // this gives you the html element 
-
-
-// document.title = "ayush" 
-
-
-// document.body.style.backgroundColor  = "red"  //  this changes the color to red
-
-
-// document.body.style.fontSize  = "50px" 
-
-
-document.body.firstChild()  = > // this gives the  text area if there is some text area otherewise it will show the navar 
-
-document.body.firstElementChild()  // this  gives the tag with the  with out the text areaa
-
-document.body.childNodes()  //  this gives all the tags that we have there in the tags
-
-document.body.parentElement()   // this gives the parent element which is html
-
-// by same process we can calculate the siblings 
-// next element siblnig and like that 
-
-let a = document.getElementById("about")
-a.style.color = "red"     // this change the  color 
-
-
-let b  = document.getElementsByClassName("navbar")
-b[0].style.backgroundcolr = "blue "  //  this change the color 
-
-let a = document.querySelectorAll(".nav_bar")
-a[0].style.color =  "red"
-
-console.log(document.getElementsByName("search"))  
-// id preference is more than class 
-
-
-let a = document.getElementById("home")
-console.log(a.matches = ".item")   // this is done to check 
+//  dom manipulation
 
 
 
-// b.closest => check for the nearest element selector 
-// b.contains  check if it contains the same thihng or not 
+// get element by id()
+
+
+// const title = document.getElementById()
+
+// // get element by  class name 
+
+// const title = document.getElementsByClassName()
+
+// get  element by tag name 
+
+
+// const title = document.querySelector('div')
+// for id query selector we have #  
+
+// console.log(title)
+
+
+// const title = document.querySelectorAll('div')
+
+
+
+// console.log(title)
+
+// SHORT NOTES
+
+// 1. Selecting Elements
+
+// This is how you grab things from the page so you can work with them.
+
+// Common methods:
+
+// document.getElementById("id") → select by id
+
+// document.getElementsByClassName("class") → select by class (returns a collection)
+
+// document.getElementsByTagName("tag") → select by tag (returns a collection)
+
+// document.querySelector("selector") → select the first match (CSS-style selector)
+
+// document.querySelectorAll("selector") → select all matches (returns a NodeList)
+
+// <p id="greeting">Hello!</p>
+// <script>
+//   const greet = document.getElementById("greeting");
+//   console.log(greet.textContent); // "Hello!"
+// </script>
+
+
+// styling elements
+
+{/* <p id="msg">Hello World</p>
+<script>
+  const msg = document.getElementById("msg");
+  msg.style.color = "blue";      // text color
+  msg.style.fontSize = "24px";   // font size
+  msg.style.background = "yellow"; // background color
+</script> */}
+
+
+// creating element 
+
+// <div id="container"></div>
+
+// <script>
+//   const newPara = document.createElement("p"); // create <p>
+//   newPara.textContent = "I am a new paragraph!"; // add text
+
+//   const container = document.getElementById("container");
+//   container.appendChild(newPara); // add it to the page
+// </script>
+
+// modifying the text 
+
+
+{/* <div id="container"></div>
+
+<script>
+  const newPara = document.createElement("p"); // create <p>
+  newPara.textContent = "I am a new paragraph!"; // add text
+
+  const container = document.getElementById("container");
+  container.appendChild(newPara); // add it to the page
+</script> */}
+
+
+
+
+// modifynig attribute and clssess
 
