@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock with Day</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #111;
+      font-family: Arial, sans-serif;
+      flex-direction: column;
+      color: #0f0;
+    }
+    .clock {
+      font-size: 60px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      background: #000;
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #0f0;
+      margin-bottom: 20px;
+    }
+    .day {
+      font-size: 28px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <span id="hrs">00</span> :
+    <span id="min">00</span> :
+    <span id="sec">00</span>
+  </div>
+  <div class="day" id="day">Loading...</div>
+
+  <script>
+    let hrs = document.getElementById("hrs");
+    let min = document.getElementById("min");
+    let sec = document.getElementById("sec");
+    let day = document.getElementById("day");
+
+    setInterval(() => {
+      let currentTime = new Date();
+
+      hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+      min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+      sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+
+      // Get weekday name
+      let weekday = currentTime.toLocaleDateString("en-US", { weekday: "long" });
+       
+      day.innerHTML = weekday;
+    }, 1000);
+  </script>
+</body>
+</html>
